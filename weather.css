@@ -198,7 +198,7 @@ h2 {
   background-size: 650px 650px;
   animation: snoww 2s linear infinite;
   z-index: -10;
-  /* display: none; */
+  display: none;
 }
 
 .snow::after {
@@ -223,7 +223,7 @@ h2 {
     transform: translateY(0);
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(650px);
   }
 }
 @keyframes drizzle {
