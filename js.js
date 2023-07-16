@@ -13,6 +13,7 @@ let mist = document.querySelector(".mist");
 let drizzle = document.querySelector(".drizzle");
 let card = document.querySelector(".card");
 let search = document.querySelector(".search");
+let snow = document.querySelector(".snow");
 
 button.addEventListener("click", onClick);
 
@@ -40,6 +41,8 @@ function onClick(e) {
       if (data.weather[0].main == "Clouds") {
         weathericon.src = "./images/clouds.png";
         rain.style.display = "none";
+        snow.style.display = "none";
+
         mist.style.display = "none";
         body.style.backgroundImage =
           "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(./images/eRwDMy.jpg)";
@@ -47,11 +50,14 @@ function onClick(e) {
         weathericon.src = "./images/clear.png";
         mist.style.display = "none";
         rain.style.display = "none";
+        snow.style.display = "none";
+
         body.style.backgroundImage = "url(./images/eRwDMy.jpg)";
       } else if (data.weather[0].main == "Drizzle") {
         weathericon.src = "./images/drizzle.png";
         drizzle.style.display = "block";
         rain.style.display = "none";
+        snow.style.display = "none";
         mist.style.display = "none";
         body.style.backgroundImage =
           "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(./images/eRwDMy.jpg)";
@@ -59,6 +65,7 @@ function onClick(e) {
         weathericon.src = "./images/mist.png";
         mist.style.display = "block";
         rain.style.display = "none";
+        snow.style.display = "none";
         body.style.backgroundImage =
           "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(./images/eRwDMy.jpg)";
       } else if (
@@ -67,6 +74,7 @@ function onClick(e) {
         data.weather[1].main == "Rain"
       ) {
         weathericon.src = "./images/rain.png";
+        snow.style.display = "none";
         mist.style.display = "none";
         rain.style.display = "block";
         body.style.backgroundImage =
@@ -75,7 +83,9 @@ function onClick(e) {
         weathericon.src = "./images/snow.png";
         mist.style.display = "none";
         rain.style.display = "none";
-        body.style.backgroundImage = "url(./images/snowbg.png)";
+        snow.style.display = "block";
+        body.style.backgroundImage =
+          "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(./images/eRwDMy.jpg)";
       }
 
       console.log(data);
