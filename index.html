@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Today</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./weather.css" />
+    <script src="js.js" defer></script>
+  </head>
+  <body>
+    <div class="snow"></div>
+    <div class="mist">
+      <img src="./images/cloud1.png" alt="" style="--i: 1" />
+      <img src="./images/cloud2.png" alt="" style="--i: 2" />
+      <img src="./images/cloud3.png" alt="" style="--i: 3" />
+      <img src="./images/cloud4.png" alt="" style="--i: 4" />
+      <img src="./images/cloud5.png" alt="" style="--i: 5" />
+    </div>
+    <div class="rain"></div>
+    <div class="drizzle"></div>
+
+    <div class="card">
+      <div class="search">
+        <input
+          type="search"
+          class="input-box"
+          spellcheck="false"
+          placeholder="Enter city name"
+        />
+        <img class="search-icon" src="./images/search.png" alt="" />
+      </div>
+      <div class="invalid"><p>Invalid City Name</p></div>
+      <div class="wrapper">
+        <img src="./images/drizzle.png" class="weather-icon" alt="" />
+        <div class="info">
+          <h1 class="temp">47</h1>
+          <h2 class="city">Ananthapur</h2>
+        </div>
+
+        <div class="details">
+          <div class="col">
+            <img src="./images/humidity.png" alt="" />
+            <div class="properties">
+              <p class="humidity">47%</p>
+              <p>Humdity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="./images/wind.png" alt="" />
+
+            <div class="properties">
+              <p class="wind">74 km/h</p>
+              <p>Wind</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
