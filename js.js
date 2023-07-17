@@ -16,6 +16,11 @@ let search = document.querySelector(".search");
 let snow = document.querySelector(".snow");
 
 button.addEventListener("click", onClick);
+input.addEventListener("keypress", (e) => {
+  if (e.code == "Enter") {
+    onClick(e);
+  }
+});
 
 function onClick(e) {
   console.log(input.value);
