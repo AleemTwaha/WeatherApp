@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./weather.css" />
-    <script src="js.js" defer></script>
+    <script type="module" src="js.js" defer></script>
   </head>
   <body>
     <div class="snow"></div>
@@ -32,7 +32,9 @@
           class="input-box"
           spellcheck="false"
           placeholder="Enter city name"
+          list="cities"
         />
+        <datalist id="cities"></datalist>
         <img class="search-icon" src="./images/search.png" alt="" />
       </div>
       <div class="invalid"><p>Invalid City Name</p></div>
